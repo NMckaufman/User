@@ -5,18 +5,22 @@ class User:
     
     def make_deposit(self,amount):
         self.balance += amount
+        return self
 
     def make_withdrawal(self,amount):
         self.balance -= amount
+        return self
 
     def display_user_balance(self):
         print (f"Name:{self.name} Balance:{self.balance}")
+        return self
 
     def transfer_money(self,amount,second_party):
         self.balance -= amount
         second_party.balance += amount
         self.display_user_balance()
         second_party.display_user_balance()
+        return self
 
 
 
